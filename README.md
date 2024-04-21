@@ -7,7 +7,7 @@
 ### Full-featured manga reader in distributed way
 Discover and read manga, webtoons, comics, and more – easier than ever on your Android device.
 
-[![CI](https://img.shields.io/github/actions/workflow/status/eramoss/mangabit/build_push.yml?labelColor=27303D)](https://github.com/eramoss/mangabit/actions/workflows/build_push.yml)
+[![CI](https://img.shields.io/github/actions/workflow/status/eramoss/mangabit/build_test.yml?labelColor=27303D)](https://github.com/eramoss/mangabit/actions/workflows/build_test.yml)
 [![License: Apache-2.0](https://img.shields.io/github/license/mihonapp/mihon?labelColor=27303D&color=0877d2)](/LICENSE)
 
 
