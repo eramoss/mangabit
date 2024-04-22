@@ -18,7 +18,7 @@ Features to create:
 
   
 * upload a torrent file of a chapter on nyaa.si.
-* download a torrent file just by name of chapter from nyaa.si.
+* download a torrent file just by name and language of chapter from nyaa.si.
 * list all chapters from a manga.
 * parse a torrent file of a chapter into a page to read.
 * layout.
