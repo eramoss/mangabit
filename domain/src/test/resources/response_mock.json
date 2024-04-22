@@ -1,0 +1,114 @@
+{
+  "data": {
+    "mal_id": 13,
+    "url": "https://myanimelist.net/manga/13/One_Piece",
+    "images": {
+      "jpg": {
+        "image_url": "https://cdn.myanimelist.net/images/manga/2/253146.jpg",
+        "small_image_url": "https://cdn.myanimelist.net/images/manga/2/253146t.jpg",
+        "large_image_url": "https://cdn.myanimelist.net/images/manga/2/253146l.jpg"
+      },
+      "webp": {
+        "image_url": "https://cdn.myanimelist.net/images/manga/2/253146.webp",
+        "small_image_url": "https://cdn.myanimelist.net/images/manga/2/253146t.webp",
+        "large_image_url": "https://cdn.myanimelist.net/images/manga/2/253146l.webp"
+      }
+    },
+    "approved": true,
+    "titles": [
+      {
+        "type": "Default",
+        "title": "One Piece"
+      },
+      {
+        "type": "Japanese",
+        "title": "ONE PIECE"
+      },
+      {
+        "type": "English",
+        "title": "One Piece"
+      }
+    ],
+    "title": "One Piece",
+    "title_english": "One Piece",
+    "title_japanese": "ONE PIECE",
+    "title_synonyms": [],
+    "type": "Manga",
+    "chapters": null,
+    "volumes": null,
+    "status": "Publishing",
+    "publishing": true,
+    "published": {
+      "from": "1997-07-22T00:00:00+00:00",
+      "to": null,
+      "prop": {
+        "from": {
+          "day": 22,
+          "month": 7,
+          "year": 1997
+        },
+        "to": {
+          "day": null,
+          "month": null,
+          "year": null
+        }
+      },
+      "string": "Jul 22, 1997 to ?"
+    },
+    "score": 9.22,
+    "scored": 9.22,
+    "scored_by": 378002,
+    "rank": 4,
+    "popularity": 3,
+    "members": 617938,
+    "favorites": 117241,
+    "synopsis": "Gol D. Roger, a man referred to as the \"King of the Pirates,\" is set to be executed by the World Government. But just before his demise, he confirms the existence of a great treasure, One Piece, located somewhere within the vast ocean known as the Grand Line. Announcing that One Piece can be claimed by anyone worthy enough to reach it, the King of the Pirates is executed and the Great Age of Pirates begins. Twenty-two years later, a young man by the name of Monkey D. Luffy is ready to embark on his own adventure, searching for One Piece and striving to become the new King of the Pirates. Armed with just a straw hat, a small boat, and an elastic body, he sets out on a fantastic journey to gather his own crew and a worthy ship that will take them across the Grand Line to claim the greatest status on the high seas. [Written by MAL Rewrite]",
+    "background": "One Piece is the highest-selling manga series of all time, with over 500 million copies in circulation as of 2022. Volume 67 of the series currently holds the record for highest first print run of any manga or book of all time in Japan, with 4.05 million in 2012. The series was a finalist for the Tezuka Osamu Cultural Prize three times in a row from 2000 to 2002. In 2012, it won the 41st Japan Cartoonists Association Award Grand Prize, alongside Kimuchi Yokoyama's Neko Darake. VIZ Media has published One Piece in English under the Shonen Jump imprint since January 2, 2003, and in 3-in-1 omnibus editions since December 1, 2009. VIZ Media released three boxed sets for the manga; the first including the first 23 volumes released on November 5, 2013, the second including volumes 24-46 released on November 4, 2014, and the third including volumes 47-70 released on October 4, 2016. The series has also been published in numerous amounts of languages worldwide including Korean, Malay, Indonesian, Chinese, Thai, Vietnamese, German, French, Italian, Spanish, Portuguese, Swedish, Danish, Norwegian, Finnish, Polish, Turkish, and Russian. The manga has been adapted into a live-action TV series on Netflix since August 31, 2023.",
+    "authors": [
+      {
+        "mal_id": 1881,
+        "type": "people",
+        "name": "Oda, Eiichiro",
+        "url": "https://myanimelist.net/people/1881/Eiichiro_Oda"
+      }
+    ],
+    "serializations": [
+      {
+        "mal_id": 83,
+        "type": "manga",
+        "name": "Shounen Jump (Weekly)",
+        "url": "https://myanimelist.net/manga/magazine/83/Shounen_Jump_Weekly"
+      }
+    ],
+    "genres": [
+      {
+        "mal_id": 1,
+        "type": "manga",
+        "name": "Action",
+        "url": "https://myanimelist.net/manga/genre/1/Action"
+      },
+      {
+        "mal_id": 2,
+        "type": "manga",
+        "name": "Adventure",
+        "url": "https://myanimelist.net/manga/genre/2/Adventure"
+      },
+      {
+        "mal_id": 10,
+        "type": "manga",
+        "name": "Fantasy",
+        "url": "https://myanimelist.net/manga/genre/10/Fantasy"
+      }
+    ],
+    "explicit_genres": [],
+    "themes": [],
+    "demographics": [
+      {
+        "mal_id": 27,
+        "type": "manga",
+        "name": "Shounen",
+        "url": "https://myanimelist.net/manga/genre/27/Shounen"
+      }
+    ]
+  }
+}
