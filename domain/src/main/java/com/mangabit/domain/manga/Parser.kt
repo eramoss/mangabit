@@ -1,46 +1,52 @@
 package com.mangabit.domain.manga
 
+import android.util.Log
 import com.google.gson.Gson
 import com.google.gson.annotations.SerializedName
+import java.util.logging.Logger
 
 data class MangaHandler(
     @SerializedName("data") val data: Data,
-) {
+){
 
-    data class Data(
-        @SerializedName("mal_id") val id: Long,
-        @SerializedName("url") val source: String,
-        @SerializedName("images") val images: Images,
-        @SerializedName("title") val name: String,
-        @SerializedName("authors") val authors: List<Author>,
-        @SerializedName("synopsis") val description: String,
-        @SerializedName("genres") val genres: List<Genre>,
-        @SerializedName("chapters") val chapters: Long,
-        @SerializedName("status") val status: String,
+    data class Data (
+        @SerializedName("id") val id: String,
+        @SerializedName("attributes") val attributes: Attributes,
+        @SerializedName("relationships") val relationships: List<Relationships>,
     )
-    data class Images(
-        @SerializedName("jpg") val jpg: Image,
-        @SerializedName("webp") val webp: Image,
+    data class Attributes (
+        @SerializedName("title") val title: LocalizedString?,
+        @SerializedName("altTitles") val altTitles: List<LocalizedString>?,
+        @SerializedName("description") val description: LocalizedString?,
+        @SerializedName("status") val status: String?,
+        @SerializedName("tags") val tags: List<Tags>?,
+        @SerializedName("Links") val links: Links?,
+        @SerializedName("name") val name: LocalizedString?,
+    )
+    data class LocalizedString (
+        @SerializedName("en") val en: String?,
+        @SerializedName("jp") val jp: String?,
+    )
+    data class Tags (
+        @SerializedName("id") val id: String?,
+        @SerializedName("type") val type: String?,
+        @SerializedName("attributes") val attributes: Attributes?,
+    )
+    data class Links (
+        @SerializedName("mal") val malId: String?,
+    )
+    data class Relationships (
+        @SerializedName("id") val id: String?,
+        @SerializedName("type") val type: String?,
     )
 
-    data class Image(
-        @SerializedName("image_url") val imageUrl: String,
-        @SerializedName("small_image_url") val smallImageUrl: String,
-        @SerializedName("large_image_url") val largeImageUrl: String,
-    )
+    fun getFirstAuthorId(): String {
+        val result : List<Relationships> = this.data.relationships.filter { it.type == "author" }
+        return result[0].id!!
+    }
 
-    data class Genre(
-        @SerializedName("mal_id") val id: Long,
-        @SerializedName("type") val type: String,
-        @SerializedName("name") val name: String,
-        @SerializedName("url") val url: String,
-    )
-
-    data class Author(
-        @SerializedName("mal_id") val id: Long,
-        @SerializedName("type") val type: String,
-        @SerializedName("name") val name: String,
-        @SerializedName("url") val url: String,
+    data class AuthorHandler(
+        @SerializedName("data") val data: Data,
     )
 }
 
@@ -48,23 +54,26 @@ class Parser {
     companion object {
         fun parseManga(response: String): Manga {
 
-            val mangaHandler = Gson().fromJson(response, MangaHandler::class.java).data
+            val mangaHandler = Gson().fromJson(response, MangaHandler::class.java)
+            val authorName = mangaHandler.getFirstAuthorId()
+            val mangaHandlerData = mangaHandler.data
             return Manga(
-                id = mangaHandler.id,
-                name = mangaHandler.name,
-                source = mangaHandler.source,
-                author = mangaHandler.authors.first().name,
-                description = mangaHandler.description,
-                genres = mangaHandler.genres.map { it.name },
-                status = when (mangaHandler.status) {
-                    "Publishing" -> Manga.Status.ONGOING
-                    "Finished" -> Manga.Status.COMPLETED
-                    "On Hiatus" -> Manga.Status.HIATUS
-                    "Discontinued" -> Manga.Status.CANCELLED
+                id = mangaHandlerData.id,
+                malSource = mangaHandlerData.attributes.links?.malId ?: "",
+                title = mangaHandlerData.attributes.title?.en ?: "",
+                altTitle = mangaHandlerData.attributes.altTitles?.get(0)?.en ?: "",
+                authorId = authorName,
+                description = mangaHandlerData.attributes.description?.en ?: "",
+                genres = mangaHandlerData.attributes.tags?.map { it.attributes?.name?.en ?: "" } ?: emptyList(),
+                status = when (mangaHandlerData.attributes.status) {
+                    "ongoing" -> Manga.Status.ONGOING
+                    "completed" -> Manga.Status.COMPLETED
+                    "hiatus" -> Manga.Status.HIATUS
+                    "cancelled" -> Manga.Status.CANCELLED
                     else -> Manga.Status.UNKNOWN
                 },
-                thumbnailUrl = mangaHandler.images.jpg.imageUrl,
-                chapters = mangaHandler.chapters,
+                thumbnailUrl = "",
+                chapters = 0,
                 favorite = false
             )
         }

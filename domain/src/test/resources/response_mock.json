@@ -1,113 +1,171 @@
 {
+  "result": "ok",
+  "response": "entity",
   "data": {
-    "mal_id": 13,
-    "url": "https://myanimelist.net/manga/13/One_Piece",
-    "images": {
-      "jpg": {
-        "image_url": "https://cdn.myanimelist.net/images/manga/2/253146.jpg",
-        "small_image_url": "https://cdn.myanimelist.net/images/manga/2/253146t.jpg",
-        "large_image_url": "https://cdn.myanimelist.net/images/manga/2/253146l.jpg"
+    "id": "72231b89-3934-439b-9d83-0f82e45f01d6",
+    "type": "manga",
+    "attributes": {
+      "title": {
+        "en": "Kanchigai no Atelier Meister"
       },
-      "webp": {
-        "image_url": "https://cdn.myanimelist.net/images/manga/2/253146.webp",
-        "small_image_url": "https://cdn.myanimelist.net/images/manga/2/253146t.webp",
-        "large_image_url": "https://cdn.myanimelist.net/images/manga/2/253146l.webp"
-      }
-    },
-    "approved": true,
-    "titles": [
-      {
-        "type": "Default",
-        "title": "One Piece"
-      },
-      {
-        "type": "Japanese",
-        "title": "ONE PIECE"
-      },
-      {
-        "type": "English",
-        "title": "One Piece"
-      }
-    ],
-    "title": "One Piece",
-    "title_english": "One Piece",
-    "title_japanese": "ONE PIECE",
-    "title_synonyms": [],
-    "type": "Manga",
-    "chapters": null,
-    "volumes": null,
-    "status": "Publishing",
-    "publishing": true,
-    "published": {
-      "from": "1997-07-22T00:00:00+00:00",
-      "to": null,
-      "prop": {
-        "from": {
-          "day": 22,
-          "month": 7,
-          "year": 1997
+      "altTitles": [
+        {
+          "ja-ro": "Kanchigai no Atelier Meister: Eiyuu Party no Moto Zatsuyougakari ga, Jitsu wa Sentou Igai ga SSS Rank Datta to Iu Yoku Aru Hanashi"
         },
-        "to": {
-          "day": null,
-          "month": null,
-          "year": null
+        {
+          "en": "The  Mistaken Atelier Meister"
+        },
+        {
+          "ja": "勘違いの工房主"
+        },
+        {
+          "ja": "勘違いの工房主(アトリエマイスター)"
+        },
+        {
+          "en": "The Unaware Atelier Master"
         }
+      ],
+      "description": {
+        "en": "Kuruto gets kicked out of the hero's party for being too useless in combat. However unknown to him, he's SSS Rank in skills like cooking, building, magic tool crafting, etc. \n  \nWN Raw: <https://www.alphapolis.co.jp/novel/292207951/264201950>"
       },
-      "string": "Jul 22, 1997 to ?"
+      "isLocked": false,
+      "links": {
+        "al": "132298",
+        "ap": "kanchigai-no-atelier-master",
+        "bw": "series/278865",
+        "kt": "kanchigai-no-atelier-meister",
+        "mu": "167358",
+        "amz": "https://www.amazon.co.jp/dp/B095P2GNQT",
+        "ebj": "https://ebookjapan.yahoo.co.jp/books/616585/",
+        "mal": "123453",
+        "raw": "https://www.alphapolis.co.jp/manga/official/895000315",
+        "engtl": "https://www.alpha-manga.com/manga/895000315"
+      },
+      "originalLanguage": "ja",
+      "lastVolume": "",
+      "lastChapter": "",
+      "publicationDemographic": "shounen",
+      "status": "ongoing",
+      "year": 2019,
+      "contentRating": "suggestive",
+      "tags": [
+        {
+          "id": "391b0423-d847-456f-aff0-8b0cfc03066b",
+          "type": "tag",
+          "attributes": {
+            "name": {
+              "en": "Action"
+            },
+            "description": {},
+            "group": "genre",
+            "version": 1
+          },
+          "relationships": []
+        },
+        {
+          "id": "4d32cc48-9f00-4cca-9b5a-a839f0764984",
+          "type": "tag",
+          "attributes": {
+            "name": {
+              "en": "Comedy"
+            },
+            "description": {},
+            "group": "genre",
+            "version": 1
+          },
+          "relationships": []
+        },
+        {
+          "id": "87cc87cd-a395-47af-b27a-93258283bbc6",
+          "type": "tag",
+          "attributes": {
+            "name": {
+              "en": "Adventure"
+            },
+            "description": {},
+            "group": "genre",
+            "version": 1
+          },
+          "relationships": []
+        },
+        {
+          "id": "a1f53773-c69a-4ce5-8cab-fffcd90b1565",
+          "type": "tag",
+          "attributes": {
+            "name": {
+              "en": "Magic"
+            },
+            "description": {},
+            "group": "theme",
+            "version": 1
+          },
+          "relationships": []
+        },
+        {
+          "id": "aafb99c1-7f60-43fa-b75f-fc9502ce29c7",
+          "type": "tag",
+          "attributes": {
+            "name": {
+              "en": "Harem"
+            },
+            "description": {},
+            "group": "theme",
+            "version": 1
+          },
+          "relationships": []
+        },
+        {
+          "id": "cdc58593-87dd-415e-bbc0-2ec27bf404cc",
+          "type": "tag",
+          "attributes": {
+            "name": {
+              "en": "Fantasy"
+            },
+            "description": {},
+            "group": "genre",
+            "version": 1
+          },
+          "relationships": []
+        },
+        {
+          "id": "f4122d1c-3b44-44d0-9936-ff7502c39ad3",
+          "type": "tag",
+          "attributes": {
+            "name": {
+              "en": "Adaptation"
+            },
+            "description": {},
+            "group": "format",
+            "version": 1
+          },
+          "relationships": []
+        }
+      ],
+      "state": "published",
+      "chapterNumbersResetOnNewVolume": false,
+      "createdAt": "2020-05-04T13:01:21+00:00",
+      "updatedAt": "2024-03-07T16:36:47+00:00",
+      "version": 22,
+      "availableTranslatedLanguages": [
+        "es-la",
+        "en",
+        "pt-br",
+        "fr"
+      ],
+      "latestUploadedChapter": "1eaa91ef-4aac-4aea-8120-4efd6c34334b"
     },
-    "score": 9.22,
-    "scored": 9.22,
-    "scored_by": 378002,
-    "rank": 4,
-    "popularity": 3,
-    "members": 617938,
-    "favorites": 117241,
-    "synopsis": "Gol D. Roger, a man referred to as the \"King of the Pirates,\" is set to be executed by the World Government. But just before his demise, he confirms the existence of a great treasure, One Piece, located somewhere within the vast ocean known as the Grand Line. Announcing that One Piece can be claimed by anyone worthy enough to reach it, the King of the Pirates is executed and the Great Age of Pirates begins. Twenty-two years later, a young man by the name of Monkey D. Luffy is ready to embark on his own adventure, searching for One Piece and striving to become the new King of the Pirates. Armed with just a straw hat, a small boat, and an elastic body, he sets out on a fantastic journey to gather his own crew and a worthy ship that will take them across the Grand Line to claim the greatest status on the high seas. [Written by MAL Rewrite]",
-    "background": "One Piece is the highest-selling manga series of all time, with over 500 million copies in circulation as of 2022. Volume 67 of the series currently holds the record for highest first print run of any manga or book of all time in Japan, with 4.05 million in 2012. The series was a finalist for the Tezuka Osamu Cultural Prize three times in a row from 2000 to 2002. In 2012, it won the 41st Japan Cartoonists Association Award Grand Prize, alongside Kimuchi Yokoyama's Neko Darake. VIZ Media has published One Piece in English under the Shonen Jump imprint since January 2, 2003, and in 3-in-1 omnibus editions since December 1, 2009. VIZ Media released three boxed sets for the manga; the first including the first 23 volumes released on November 5, 2013, the second including volumes 24-46 released on November 4, 2014, and the third including volumes 47-70 released on October 4, 2016. The series has also been published in numerous amounts of languages worldwide including Korean, Malay, Indonesian, Chinese, Thai, Vietnamese, German, French, Italian, Spanish, Portuguese, Swedish, Danish, Norwegian, Finnish, Polish, Turkish, and Russian. The manga has been adapted into a live-action TV series on Netflix since August 31, 2023.",
-    "authors": [
+    "relationships": [
       {
-        "mal_id": 1881,
-        "type": "people",
-        "name": "Oda, Eiichiro",
-        "url": "https://myanimelist.net/people/1881/Eiichiro_Oda"
-      }
-    ],
-    "serializations": [
-      {
-        "mal_id": 83,
-        "type": "manga",
-        "name": "Shounen Jump (Weekly)",
-        "url": "https://myanimelist.net/manga/magazine/83/Shounen_Jump_Weekly"
-      }
-    ],
-    "genres": [
-      {
-        "mal_id": 1,
-        "type": "manga",
-        "name": "Action",
-        "url": "https://myanimelist.net/manga/genre/1/Action"
+        "id": "4deef1dd-1f4d-4064-9879-75de95397964",
+        "type": "author"
       },
       {
-        "mal_id": 2,
-        "type": "manga",
-        "name": "Adventure",
-        "url": "https://myanimelist.net/manga/genre/2/Adventure"
+        "id": "d5b92baf-1ed7-4c7b-aa65-1ac22d9ea867",
+        "type": "artist"
       },
       {
-        "mal_id": 10,
-        "type": "manga",
-        "name": "Fantasy",
-        "url": "https://myanimelist.net/manga/genre/10/Fantasy"
-      }
-    ],
-    "explicit_genres": [],
-    "themes": [],
-    "demographics": [
-      {
-        "mal_id": 27,
-        "type": "manga",
-        "name": "Shounen",
-        "url": "https://myanimelist.net/manga/genre/27/Shounen"
+        "id": "14f2cc0a-d4d8-4913-8eb3-5f7e52bfdec0",
+        "type": "cover_art"
       }
     ]
   }

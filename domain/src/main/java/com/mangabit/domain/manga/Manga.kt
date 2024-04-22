@@ -2,10 +2,11 @@ package com.mangabit.domain.manga
 import java.io.Serializable
 
 data class Manga(
-    val id: Long,
-    val source: String,
-    val name: String,
-    val author: String,
+    val id: String,
+    val malSource: String,
+    val title: String,
+    val altTitle: String,
+    val authorId: String,
     val description: String,
     val genres: List<String>,
     val status: Status,
