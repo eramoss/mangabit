@@ -64,7 +64,7 @@ class Parser {
                     else -> Manga.Status.UNKNOWN
                 },
                 thumbnailUrl = mangaHandler.images.jpg.imageUrl,
-                chapters = mangaHandler.chapters.toLong(),
+                chapters = mangaHandler.chapters,
                 favorite = false
             )
         }
