@@ -14,13 +14,14 @@ Discover and read manga, webtoons, comics, and more – easier than ever on your
 ## Features
 
 <div align="left">
-Features:
+Features to create:
 
-* Track all sources from MyAnimeList.
-* Download and upload entries in torrent network.
-* Local reading of content.
-* Beauty layout.
-* Download sources.
+  
+* upload a torrent file of a chapter on nyaa.si.
+* download a torrent file just by name of chapter from nyaa.si.
+* list all chapters from a manga.
+* parse a torrent file of a chapter into a page to read.
+* layout.
 </div>
 
 ## Contributing
