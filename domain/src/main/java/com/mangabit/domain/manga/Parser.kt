@@ -59,8 +59,8 @@ class Parser {
                 status = when (mangaHandler.status) {
                     "Publishing" -> Manga.Status.ONGOING
                     "Finished" -> Manga.Status.COMPLETED
-                    "Hiatus" -> Manga.Status.HIATUS
-                    "Cancelled" -> Manga.Status.CANCELLED
+                    "On Hiatus" -> Manga.Status.HIATUS
+                    "Discontinued" -> Manga.Status.CANCELLED
                     else -> Manga.Status.UNKNOWN
                 },
                 thumbnailUrl = mangaHandler.images.jpg.imageUrl,
