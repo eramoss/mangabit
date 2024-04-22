@@ -4,7 +4,7 @@ import junit.framework.TestCase.assertEquals
 import org.junit.Test
 import java.nio.file.Paths
 
-class GetMangaTest {
+class ParseMangaTest {
 
     @Test
     fun `should return a manga`() {

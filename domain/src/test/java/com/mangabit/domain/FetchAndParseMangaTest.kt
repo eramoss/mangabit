@@ -4,7 +4,7 @@ import com.mangabit.domain.manga.Fetcher.Companion.fetchManga
 import com.mangabit.domain.manga.Parser
 import org.junit.Test
 
-class FetchAndParseTest {
+class FetchAndParseMangaTest {
     @Test
     fun `should fetch a manga from MAL and parse it into a manga`() {
         val mangaId = 13
