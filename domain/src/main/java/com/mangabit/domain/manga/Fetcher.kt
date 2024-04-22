@@ -1,8 +1,7 @@
 package com.mangabit.domain.manga
 
-import okhttp3.Response
-import com.mangabit.domain.Utils
 import com.mangabit.domain.Utils.Companion.AUTHOR_URL
+import okhttp3.Response
 import com.mangabit.domain.Utils.Companion.MANGA_URL
 
 class Fetcher {

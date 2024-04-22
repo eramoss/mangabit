@@ -1,9 +1,7 @@
 package com.mangabit.domain.manga
 
-import android.util.Log
 import com.google.gson.Gson
 import com.google.gson.annotations.SerializedName
-import java.util.logging.Logger
 
 data class MangaHandler(
     @SerializedName("data") val data: Data,
@@ -46,7 +44,14 @@ data class MangaHandler(
     }
 
     data class AuthorHandler(
-        @SerializedName("data") val data: Data,
+        @SerializedName("data") val data: AuthorData?,
+    )
+
+    data class AuthorData(
+        @SerializedName("attributes") val attr: AuthorAttr?,
+    )
+    data class AuthorAttr(
+        @SerializedName("name") val name: String?,
     )
 }
 
@@ -76,6 +81,10 @@ class Parser {
                 chapters = 0,
                 favorite = false
             )
+        }
+        fun parseAuthorName(response: String) : String {
+            val authorHandler = Gson().fromJson(response, MangaHandler.AuthorHandler::class.java)
+            return authorHandler.data?.attr?.name?: ""
         }
     }
 

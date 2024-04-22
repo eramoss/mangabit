@@ -1,5 +1,6 @@
 package com.mangabit.domain
 
+import com.mangabit.domain.manga.Fetcher.Companion.fetchAuthorName
 import com.mangabit.domain.manga.Fetcher.Companion.fetchManga
 import com.mangabit.domain.manga.Parser
 import org.junit.Test
@@ -12,4 +13,12 @@ class FetchAndParseMangaTest {
         val manga = Parser.parseManga(response.body!!.string())
         assert(manga.id == mangaId)
      }
+
+    @Test
+    fun `should fetch and parse a author name by id`() {
+        val authorId = "4deef1dd-1f4d-4064-9879-75de95397964"
+        val response = fetchAuthorName(authorId)
+        val authorName = Parser.parseAuthorName(response.body!!.string())
+        assert(authorName == "Tokino Yousuke")
+    }
 }
