@@ -38,6 +38,7 @@ dependencies {
     implementation(libs.androidx.appcompat)
     implementation(libs.material)
     implementation(libs.okhttp)
+    implementation(libs.gson)
 
 
     testImplementation(libs.junit)
