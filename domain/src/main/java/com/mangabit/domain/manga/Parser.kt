@@ -18,7 +18,7 @@ data class MangaHandler(
         @SerializedName("description") val description: LocalizedString?,
         @SerializedName("status") val status: String?,
         @SerializedName("tags") val tags: List<Tags>?,
-        @SerializedName("Links") val links: Links?,
+        @SerializedName("links") val links: Links?,
         @SerializedName("name") val name: LocalizedString?,
     )
     data class LocalizedString (
