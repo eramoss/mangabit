@@ -6,6 +6,7 @@ class Utils {
         const val MANGA_URL = "$API/manga"
         const val CHAPTER_URL = "$API/chapter"
         const val LIST_URL = "$API/list"
+        const val COVER_URL = "$API/cover"
         const val CDN_URL = "https://uploads.mangadex.org"
         const val AUTHOR_URL = "$API/author"
 

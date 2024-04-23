@@ -23,7 +23,8 @@ data class MangaHandler(
     )
     data class LocalizedString (
         @SerializedName("en") val en: String?,
-        @SerializedName("jp") val jp: String?,
+        @SerializedName("ja-ro") val jaRo: String?,
+        @SerializedName("ja") val ja: String?,
     )
     data class Tags (
         @SerializedName("id") val id: String?,
@@ -53,21 +54,37 @@ data class MangaHandler(
     data class AuthorAttr(
         @SerializedName("name") val name: String?,
     )
+
+    data class CoverHandler(
+        @SerializedName("data") val data: CoverData?,
+    )
+
+    data class CoverData(
+        @SerializedName("attributes") val attributes: CoverAttributes?,
+    )
+
+    data class CoverAttributes(
+        @SerializedName("fileName") val fileName: String?,
+    )
+
 }
 
 class Parser {
     companion object {
         fun parseManga(response: String): Manga {
-
             val mangaHandler = Gson().fromJson(response, MangaHandler::class.java)
-            val authorName = mangaHandler.getFirstAuthorId()
+            val coverImageId = mangaHandler.data.relationships.filter { it.type == "cover_art" }[0].id?: ""
+            val coverImage = Fetcher.fetchCoverImage(coverImageId).body?.string()?.let { parseCoverImage(it) } ?: ""
+            val authorName = Fetcher.fetchAuthorName(mangaHandler.getFirstAuthorId()).body?.string()?.let { parseAuthorName(it) } ?: ""
             val mangaHandlerData = mangaHandler.data
             return Manga(
                 id = mangaHandlerData.id,
                 malSource = mangaHandlerData.attributes.links?.malId ?: "",
                 title = mangaHandlerData.attributes.title?.en ?: "",
-                altTitle = mangaHandlerData.attributes.altTitles?.get(0)?.en ?: "",
-                authorId = authorName,
+                altTitle = mangaHandlerData.attributes.altTitles?.joinToString(", ") {
+                    it.jaRo ?: ""
+                } ?: "",
+                author = authorName,
                 description = mangaHandlerData.attributes.description?.en ?: "",
                 genres = mangaHandlerData.attributes.tags?.map { it.attributes?.name?.en ?: "" } ?: emptyList(),
                 status = when (mangaHandlerData.attributes.status) {
@@ -77,7 +94,7 @@ class Parser {
                     "cancelled" -> Manga.Status.CANCELLED
                     else -> Manga.Status.UNKNOWN
                 },
-                thumbnailUrl = "",
+                thumbnailUrl = coverImage,
                 chapters = 0,
                 favorite = false
             )
@@ -85,6 +102,11 @@ class Parser {
         fun parseAuthorName(response: String) : String {
             val authorHandler = Gson().fromJson(response, MangaHandler.AuthorHandler::class.java)
             return authorHandler.data?.attr?.name?: ""
+        }
+
+        fun parseCoverImage(response: String) : String {
+            val coverHandler = Gson().fromJson(response, MangaHandler.CoverHandler::class.java)
+            return coverHandler.data?.attributes?.fileName?: ""
         }
     }
 
