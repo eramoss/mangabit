@@ -23,14 +23,6 @@ class Fetcher {
             ).execute()
         }
 
-        fun fetchChapterList(id: String): Response {
-            return okhttp3.OkHttpClient().newCall(
-                okhttp3.Request.Builder()
-                    .url("$MANGA_URL/$id/aggregate")
-                    .build()
-            ).execute()
-        }
-
         fun fetchCoverImage(id: String): Response {
             return okhttp3.OkHttpClient().newCall(
                 okhttp3.Request.Builder()
